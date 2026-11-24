@@ -1,0 +1,67 @@
+{
+  "account_id": "200000000008",
+  "name": "data-warehouse",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0008",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": false,
+  "backups": true,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": true,
+  "rightsize_reviewed": false,
+  "storage_tiered": true,
+  "idle_reviewed": false,
+  "monthly_cost": [
+    9202.38,
+    9365.41,
+    9401.64,
+    9556.18,
+    9692.63,
+    9698.04,
+    9881.76,
+    10012.05,
+    10128.02,
+    10204.56,
+    10257.52,
+    10395.77
+  ],
+  "instances": [
+    {
+      "id": "i-0008a",
+      "instance_type": "m5.2xlarge",
+      "cpu_peak_pct": 20,
+      "mem_peak_pct": 30
+    },
+    {
+      "id": "i-0008b",
+      "instance_type": "t3.large",
+      "cpu_peak_pct": 68,
+      "mem_peak_pct": 71
+    }
+  ],
+  "buckets": []
+}

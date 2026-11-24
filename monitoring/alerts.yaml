@@ -1,0 +1,19 @@
+# Prometheus governance alerts (used by modules/monitoring-prometheus)
+groups:
+  - name: city-governance
+    rules:
+      - alert: TagComplianceDropping
+        expr: citygov_tag_compliance_ratio < 0.95
+        for: 15m
+        labels: { severity: warning }
+        annotations: { summary: "Tag compliance below 95% in an account" }
+      - alert: BudgetBurnRateHigh
+        expr: citygov_budget_forecast_ratio > 1.0
+        for: 1h
+        labels: { severity: critical }
+        annotations: { summary: "Forecast spend exceeds monthly budget" }
+      - alert: TransitGatewayAttachmentDown
+        expr: aws_tgw_attachment_up == 0
+        for: 5m
+        labels: { severity: critical }
+        annotations: { summary: "A spoke VPC lost its Transit Gateway attachment" }

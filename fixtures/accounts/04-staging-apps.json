@@ -1,0 +1,69 @@
+{
+  "account_id": "200000000003",
+  "name": "staging-apps",
+  "region": "us-gov-east-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0003",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": false,
+  "change_automated": false,
+  "rightsize_reviewed": true,
+  "storage_tiered": false,
+  "idle_reviewed": true,
+  "monthly_cost": [
+    5949.68,
+    6004.6,
+    6119.45,
+    6157.81,
+    6230.0,
+    6250.11,
+    6358.59,
+    6446.87,
+    6515.36,
+    6543.15,
+    6639.41,
+    6716.04
+  ],
+  "instances": [
+    {
+      "id": "i-0003a",
+      "instance_type": "m5.xlarge",
+      "cpu_peak_pct": 55,
+      "mem_peak_pct": 60
+    }
+  ],
+  "buckets": [
+    {
+      "name": "staging-apps-archive",
+      "size_gb": 2900,
+      "age_days": 240,
+      "accesses_per_month": 0,
+      "storage_class": "STANDARD"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "account_id": "200000000005",
+  "name": "shared-network",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0005",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": false,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": false,
+  "rightsize_reviewed": false,
+  "storage_tiered": false,
+  "idle_reviewed": true,
+  "monthly_cost": [
+    7247.97,
+    7385.26,
+    7428.49,
+    7556.14,
+    7606.78,
+    7744.34,
+    7754.89,
+    7878.41,
+    7944.59,
+    8041.72,
+    8098.87,
+    8243.87
+  ],
+  "instances": [
+    {
+      "id": "i-0005a",
+      "instance_type": "m5.xlarge",
+      "cpu_peak_pct": 55,
+      "mem_peak_pct": 60
+    }
+  ],
+  "buckets": []
+}

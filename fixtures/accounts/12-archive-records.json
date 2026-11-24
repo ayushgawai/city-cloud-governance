@@ -1,0 +1,61 @@
+{
+  "account_id": "200000000011",
+  "name": "archive-records",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0011",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": false,
+  "rightsize_reviewed": false,
+  "storage_tiered": false,
+  "idle_reviewed": true,
+  "monthly_cost": [
+    11134.03,
+    11227.49,
+    11378.9,
+    11544.45,
+    11719.26,
+    11812.12,
+    11953.44,
+    12048.01,
+    12216.23,
+    12329.79,
+    12523.54,
+    12607.38
+  ],
+  "instances": [
+    {
+      "id": "i-0011a",
+      "instance_type": "m5.xlarge",
+      "cpu_peak_pct": 55,
+      "mem_peak_pct": 60
+    }
+  ],
+  "buckets": []
+}

@@ -1,0 +1,75 @@
+{
+  "account_id": "200000000006",
+  "name": "shared-logging",
+  "region": "us-east-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0006",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 1,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": false,
+  "change_automated": true,
+  "rightsize_reviewed": true,
+  "storage_tiered": false,
+  "idle_reviewed": false,
+  "monthly_cost": [
+    7881.59,
+    7962.24,
+    8031.09,
+    8236.1,
+    8257.9,
+    8314.08,
+    8433.97,
+    8565.76,
+    8689.94,
+    8730.28,
+    8806.14,
+    8891.25
+  ],
+  "instances": [
+    {
+      "id": "i-0006a",
+      "instance_type": "m5.2xlarge",
+      "cpu_peak_pct": 18,
+      "mem_peak_pct": 30
+    },
+    {
+      "id": "i-0006b",
+      "instance_type": "t3.large",
+      "cpu_peak_pct": 68,
+      "mem_peak_pct": 71
+    }
+  ],
+  "buckets": [
+    {
+      "name": "shared-logging-archive",
+      "size_gb": 3800,
+      "age_days": 240,
+      "accesses_per_month": 0,
+      "storage_class": "STANDARD"
+    }
+  ]
+}

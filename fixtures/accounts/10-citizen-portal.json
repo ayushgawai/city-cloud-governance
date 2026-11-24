@@ -1,0 +1,67 @@
+{
+  "account_id": "200000000009",
+  "name": "citizen-portal",
+  "region": "us-gov-east-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0009",
+      "encrypted": true,
+      "tags": {
+        "Environment": "production",
+        "Owner": "data"
+      }
+    }
+  ],
+  "planted_drift": 3,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": false,
+  "change_automated": false,
+  "rightsize_reviewed": true,
+  "storage_tiered": false,
+  "idle_reviewed": true,
+  "monthly_cost": [
+    9811.62,
+    9966.68,
+    10035.71,
+    10207.31,
+    10373.16,
+    10486.15,
+    10559.56,
+    10715.32,
+    10832.31,
+    10879.49,
+    10982.57,
+    11114.6
+  ],
+  "instances": [
+    {
+      "id": "i-0009a",
+      "instance_type": "m5.xlarge",
+      "cpu_peak_pct": 55,
+      "mem_peak_pct": 60
+    }
+  ],
+  "buckets": [
+    {
+      "name": "citizen-portal-archive",
+      "size_gb": 4700,
+      "age_days": 240,
+      "accesses_per_month": 0,
+      "storage_class": "STANDARD"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "account_id": "200000000004",
+  "name": "dev-sandbox",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    },
+    {
+      "name": "legacy-admin",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "*"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0004",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 1,
+  "cloudtrail": true,
+  "multi_az": false,
+  "backups": true,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": true,
+  "rightsize_reviewed": false,
+  "storage_tiered": true,
+  "idle_reviewed": false,
+  "monthly_cost": [
+    6590.53,
+    6736.33,
+    6771.99,
+    6860.77,
+    6917.86,
+    6958.54,
+    7114.81,
+    7195.79,
+    7198.76,
+    7330.86,
+    7416.04,
+    7497.0
+  ],
+  "instances": [
+    {
+      "id": "i-0004a",
+      "instance_type": "m5.2xlarge",
+      "cpu_peak_pct": 16,
+      "mem_peak_pct": 30
+    },
+    {
+      "id": "i-0004b",
+      "instance_type": "t3.large",
+      "cpu_peak_pct": 68,
+      "mem_peak_pct": 71
+    }
+  ],
+  "buckets": []
+}

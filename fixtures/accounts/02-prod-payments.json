@@ -1,0 +1,61 @@
+{
+  "account_id": "200000000001",
+  "name": "prod-payments",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": null,
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0001",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 1,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": false,
+  "rightsize_reviewed": false,
+  "storage_tiered": false,
+  "idle_reviewed": true,
+  "monthly_cost": [
+    4685.6,
+    4652.84,
+    4792.83,
+    4860.92,
+    4824.15,
+    4977.3,
+    5019.11,
+    5029.4,
+    5081.34,
+    5170.08,
+    5196.11,
+    5272.45
+  ],
+  "instances": [
+    {
+      "id": "i-0001a",
+      "instance_type": "m5.xlarge",
+      "cpu_peak_pct": 55,
+      "mem_peak_pct": 60
+    }
+  ],
+  "buckets": []
+}

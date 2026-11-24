@@ -1,0 +1,67 @@
+{
+  "account_id": "200000000002",
+  "name": "prod-gis",
+  "region": "us-gov-west-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0002",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": true,
+  "backups": true,
+  "monitoring": true,
+  "runbook": true,
+  "change_automated": true,
+  "rightsize_reviewed": false,
+  "storage_tiered": false,
+  "idle_reviewed": false,
+  "monthly_cost": [
+    5302.51,
+    5354.15,
+    5393.71,
+    5446.44,
+    5552.47,
+    5633.13,
+    5696.13,
+    5770.07,
+    5801.05,
+    5818.17,
+    5903.06,
+    6034.23
+  ],
+  "instances": [
+    {
+      "id": "i-0002a",
+      "instance_type": "m5.2xlarge",
+      "cpu_peak_pct": 14,
+      "mem_peak_pct": 30
+    },
+    {
+      "id": "i-0002b",
+      "instance_type": "t3.large",
+      "cpu_peak_pct": 68,
+      "mem_peak_pct": 71
+    }
+  ],
+  "buckets": []
+}

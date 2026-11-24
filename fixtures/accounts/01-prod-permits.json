@@ -1,0 +1,75 @@
+{
+  "account_id": "200000000000",
+  "name": "prod-permits",
+  "region": "us-gov-east-1",
+  "roles": [
+    {
+      "name": "app-role",
+      "permission_boundary": "city-permission-boundary",
+      "actions": [
+        "ec2:Describe*",
+        "s3:GetObject"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "ec2_instance",
+      "id": "i-0000",
+      "encrypted": true,
+      "tags": {
+        "CostCenter": "CC-100",
+        "Environment": "prod",
+        "Owner": "platform",
+        "DataClassification": "internal"
+      }
+    }
+  ],
+  "planted_drift": 0,
+  "cloudtrail": true,
+  "multi_az": false,
+  "backups": false,
+  "monitoring": true,
+  "runbook": false,
+  "change_automated": true,
+  "rightsize_reviewed": true,
+  "storage_tiered": true,
+  "idle_reviewed": false,
+  "monthly_cost": [
+    4033.28,
+    4068.38,
+    4047.9,
+    4126.36,
+    4188.15,
+    4244.16,
+    4345.4,
+    4291.64,
+    4404.55,
+    4415.71,
+    4478.66,
+    4492.36
+  ],
+  "instances": [
+    {
+      "id": "i-0000a",
+      "instance_type": "m5.2xlarge",
+      "cpu_peak_pct": 12,
+      "mem_peak_pct": 30
+    },
+    {
+      "id": "i-0000b",
+      "instance_type": "t3.large",
+      "cpu_peak_pct": 68,
+      "mem_peak_pct": 71
+    }
+  ],
+  "buckets": [
+    {
+      "name": "prod-permits-archive",
+      "size_gb": 2000,
+      "age_days": 240,
+      "accesses_per_month": 0,
+      "storage_class": "STANDARD"
+    }
+  ]
+}
